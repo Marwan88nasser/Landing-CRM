@@ -68,20 +68,22 @@ body {
   width: 360px;
   height: auto;
 }
-
-.main-left h2 {
+.landing-section .main-left h2 {
   font-size: 38px;
   margin-bottom: 20px;
   font-weight: bold;
 }
-.main-left p {
+.landing-section .main-left p {
   margin-bottom: 15px;
 }
-.main-left ul {
-  list-style: none;
-}
-.main-left ul li {
+.landing-section .main-left ul li {
   margin-bottom: 8px;
+}
+.landing-section .main-left .awards-section {
+  justify-content: flex-start;
+}
+.landing-section .main-left .awards-section .award-badge {
+  width: 115px !important;
 }
 
 .awards-section {
@@ -118,17 +120,17 @@ body {
   width: 20px;
   height: 20px;
   background: #ff492c;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  clip-path: polygon(50% 0%, 39% 35%, 2% 35%, 32% 57%, 21% 91%, 50% 70%, 79% 91%, 68% 57%, 98% 35%, 61% 35%);
 }
 .awards-section .rating-circle .star.half {
-  background: linear-gradient(to right, #ff492c 50%, #ddd 50%);
+  background: linear-gradient(to left, #ff492c 50%, #c7c6c6 50%);
 }
 .awards-section .award-badge {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150px;
+  width: 125px;
   height: 100%;
   clip-path: polygon(50% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%, 0% 0%);
   padding: 15px 10px;
@@ -138,14 +140,14 @@ body {
   background-color: white;
 }
 .awards-section .award-badge .award-icon {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background: #FF6B35;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-weight: bold;
   color: white;
   font-size: 16px;
@@ -154,25 +156,13 @@ body {
   font-size: 0.85rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   line-height: 1.2;
 }
 .awards-section .award-badge .award-subtitle {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   color: #666;
   margin-bottom: 8px;
-}
-.awards-section .award-badge .award-year {
-  background: #8A2BE2;
-  color: white;
-  font-size: 0.7rem;
-  padding: 2px 8px;
-  margin-bottom: 8px;
-  border-radius: 12px;
-  font-weight: 600;
-}
-.awards-section .award-badge.leader-badge .award-year {
-  background: #FF6B35;
 }
 
 .trusted-by {
@@ -292,14 +282,14 @@ body {
 }
 .review-card .name {
   position: relative;
-  padding-left: 30px;
+  padding-inline-start: 30px;
   font-size: 18px;
 }
 .review-card .name::before {
   content: url(https://www.socialpilot.co/wp-content/uploads/2023/06/g2-icon.svg);
   position: absolute;
   z-index: 10;
-  left: 0px;
+  inset-inline-start: 0px;
   top: 2px;
 }
 .review-card .stars {
@@ -386,7 +376,7 @@ body {
   position: relative;
   font-size: 18px;
   line-height: 28px;
-  padding-left: 40px;
+  padding-inline-start: 40px;
   color: #1b1c1e;
 }
 .features-tabs .content-box .list-mark li:not(:last-child) {
@@ -400,7 +390,7 @@ body {
   background-image: url(https://www.socialpilot.co/wp-content/uploads/2021/07/Send-icon.png);
   background-size: cover;
   background-position: center;
-  left: 0;
+  inset-inline-start: 0;
   top: 15px;
   transform: translateY(-50%);
 }
@@ -469,9 +459,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 30px;
-  flex-wrap: wrap;
 }
 .pricing-section .features-row .feature-item {
   display: flex;
@@ -482,7 +472,7 @@ body {
 .pricing-section .features-row .feature-item i,
 .pricing-section .features-row .feature-item svg {
   color: #10b981;
-  margin-right: 8px;
+  margin-inline-end: 8px;
   font-size: 14px;
 }
 .pricing-section .billing-toggle {
@@ -509,7 +499,7 @@ body {
   content: "";
   position: absolute;
   top: 3px;
-  right: 3px;
+  inset-inline-start: 3px;
   width: 26px;
   height: 26px;
   background: white;
@@ -523,7 +513,7 @@ body {
   border-radius: 12px;
   font-size: 0.75rem;
   font-weight: 600;
-  margin-left: 10px;
+  margin-inline-end: 10px;
 }
 .pricing-section .pricing-cards {
   display: grid;
@@ -543,7 +533,7 @@ body {
 .pricing-section .pricing-cards .pricing-card .popular-badge {
   position: absolute;
   top: -12px;
-  left: 50%;
+  inset-inline-end: 50%;
   transform: translateX(-50%);
   background-color: #10b981;
   color: white;
@@ -647,7 +637,7 @@ body {
   content: "";
   position: absolute;
   top: -50%;
-  left: -20%;
+  inset-inline-end: -20%;
   width: 40%;
   height: 200%;
   background: rgba(37, 99, 235, 0.03);
@@ -658,7 +648,7 @@ body {
   content: "";
   position: absolute;
   top: -30%;
-  right: -15%;
+  inset-inline-start: -15%;
   width: 30%;
   height: 160%;
   background: rgba(16, 185, 129, 0.03);
@@ -680,8 +670,8 @@ body {
 .testimonials-section .section-subtitle {
   max-width: 700px;
   margin-bottom: 25px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline-end: auto;
+  margin-inline-start: auto;
   font-size: 1.1rem;
   text-align: center;
   color: #6b7280;
@@ -714,6 +704,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  min-height: 198px;
   padding: 20px;
   border: 1px solid rgba(229, 231, 235, 0.5);
   border-radius: 20px;
@@ -724,7 +715,7 @@ body {
 .testimonial-card .testimonial-quote {
   position: absolute;
   top: -15px;
-  left: 30px;
+  inset-inline-end: 30px;
   font-size: 3rem;
   color: #2563eb;
   font-weight: bold;
@@ -751,7 +742,7 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin-right: 16px;
+  margin-inline-end: 16px;
   -o-object-fit: cover;
      object-fit: cover;
   border: 3px solid #f3f4f6;

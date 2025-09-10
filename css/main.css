@@ -103,37 +103,6 @@ body {
   gap: 30px;
   margin-bottom: 40px;
 }
-.awards-section .rating-circle {
-  width: 177px;
-  height: 177px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  background-color: #f4f9ff;
-}
-.awards-section .rating-circle .rating-number {
-  margin-bottom: 15px;
-  font-size: 32px;
-  line-height: 32px;
-  font-weight: 700;
-  color: #1B1C1E;
-}
-.awards-section .rating-circle .stars {
-  display: flex;
-  gap: 3px;
-}
-.awards-section .rating-circle .star {
-  width: 20px;
-  height: 20px;
-  background: #ff492c;
-  clip-path: polygon(50% 0%, 39% 35%, 2% 35%, 32% 57%, 21% 91%, 50% 70%, 79% 91%, 68% 57%, 98% 35%, 61% 35%);
-}
-.awards-section .rating-circle .star.half {
-  background: linear-gradient(to left, #ff492c 50%, #c7c6c6 50%);
-}
 .awards-section .award-badge {
   position: relative;
   display: flex;
@@ -838,6 +807,7 @@ body {
   overflow: hidden;
   color: white;
   background: linear-gradient(135deg, #4A90E2 0%, #357ABD 50%, #2E5B8C 100%);
+  padding: 80px 0;
 }
 .hero-section::before, .hero-section::after {
   content: "";
@@ -862,10 +832,11 @@ body {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .hero-section .subtitle {
   max-width: 600px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -873,9 +844,96 @@ body {
   font-weight: 400;
   line-height: 1.6;
   opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* قسم الفوتر */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 40px;
+}
+.partners-grid .partner-logo {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.4s ease;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 180px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.partners-grid .partner-logo img {
+  max-width: 100%;
+  max-height: 70px;
+  filter: grayscale(100%) brightness(0) invert(1);
+  opacity: 0.7;
+  transition: all 0.4s ease;
+  z-index: 1;
+  position: relative;
+}
+.partners-grid .partner-logo .partner-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.partners-grid .partner-logo:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+.partners-grid .partner-logo:hover img {
+  filter: none;
+  opacity: 1;
+}
+.partners-grid .partner-logo:hover::before {
+  transform: translateX(100%);
+}
+.partners-grid .partner-logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .partner-logo {
+    width: 150px;
+    height: 100px;
+    padding: 20px;
+  }
+  .partner-logo img {
+    max-height: 50px;
+  }
+}
 .footer-section {
   background: #f5f5f5;
   padding: 30px 20px;

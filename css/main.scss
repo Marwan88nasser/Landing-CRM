@@ -305,18 +305,6 @@
      margin-bottom: 15px;
    }
 
-   a {
-     color: #0066ff;
-     font-weight: 600;
-     font-size: 14px;
-     text-decoration: none;
-     transition: 0.2s;
-
-     &:hover {
-       text-decoration: underline;
-     }
-   }
-
    &:hover {
      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
      transform: translateY(-5px);

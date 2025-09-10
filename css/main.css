@@ -259,16 +259,6 @@ body {
   line-height: 1.6;
   margin-bottom: 15px;
 }
-.feature-card a {
-  color: #0066ff;
-  font-weight: 600;
-  font-size: 14px;
-  text-decoration: none;
-  transition: 0.2s;
-}
-.feature-card a:hover {
-  text-decoration: underline;
-}
 .feature-card:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   transform: translateY(-5px);

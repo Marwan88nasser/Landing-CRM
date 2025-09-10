@@ -850,7 +850,7 @@ body {
 .partners-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
+  gap: 20px;
   align-items: center;
   justify-items: center;
   margin-top: 40px;
@@ -863,7 +863,7 @@ body {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 180px;
+  width: 200px;
   height: 120px;
   display: flex;
   align-items: center;

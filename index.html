@@ -39,10 +39,70 @@
     <!-- Header -->
     <div class="header">
       <div class="container">
-        <img src="images/logo.png" alt="Logo" />
+        <h1 class="m-0 fw-bold fs-4">
+          <img src="images/site-logo.png" alt="Logo" />
+          كواكب التفنية
+        </h1>
         <div class="buttons">
-          <button class="demo-btn">اطلب التجربة</button>
-          <button class="trial-btn">ابدأ تجربتك المجانية</button>
+          <button
+            class="demo-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#demoModal"
+          >
+            اطلب التجربة
+          </button>
+          <a href="https://www.youtube.com/watch?v=ZRJy4ECrhxY" target="_blank" class="trial-btn">
+            <i class="bi bi-play-btn-fill"></i> الفيديو التعريفي
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="demoModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-6" id="exampleModalLabel">أرسل طلبك للتجربة</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-12">
+                <label for="" class="w-100">
+                  <span>الاسم</span>
+                  <input type="text" class="form-control">
+                </label>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="" class="w-100">
+                  <span>رقم الجوال</span>
+                  <input type="tel" class="form-control">
+                </label>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="" class="w-100">
+                  <span>البريد</span>
+                  <input type="email" class="form-control">
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm px-3"
+              data-bs-dismiss="modal"
+            >
+              الغاء
+            </button>
+            <button type="button" class="btn btn-primary btn-sm px-3">إرسال</button>
+          </div>
         </div>
       </div>
     </div>
@@ -98,7 +158,7 @@
                   <!-- <div class="award-year">2025</div> -->
                 </div>
 
-                <div class="award-badge leader-badge">
+                <div class="award-badge">
                   <div class="award-icon">
                     <i class="bi bi-card-heading"></i>
                   </div>
@@ -401,21 +461,18 @@
                 </p>
                 <ul class="list-mark">
                   <li>
-                    إدارة جميع بيانات العملاء وتفاصيل التواصل معهم في نظام موحد
-                    ومتكامل بمرونة فائقة.
+                    إضافة العملاء المحتملين بسهولة وتحويلهم إلى عملاء حقيقيين مع
+                    متابعة شاملة لكامل رحلة العميل.
                   </li>
                   <li>
-                    البحث السريع والتصفية الذكية حسب الحقول المختلفة لتجد ما
-                    تحتاجه فورًا وبأعلى دقة وسهولة.
+                    إتمام الصفقات وتنسيق المواعيد اليومية والأسبوعية مع نظام
+                    التذكيرات الذكي لضمان عدم تفويت أي فرصة.
                   </li>
                   <li>
-                    تخصيص الحقول والمعلومات بما يتناسب مع طبيعة عملك واحتياجات
-                    شركتك بشكل كامل، مع مرونة عالية في الإعدادات وضبط التفاصيل.
+                    تصنيف العملاء حسب النشاط والمنتجات مع إنشاء الإحصائيات
+                    والتقارير الشاملة وإمكانية تصدير وحفظ البيانات.
                   </li>
                 </ul>
-                <a href="#" class="btn btn-primary p-3"
-                  >→ ابدأ تجربتك المجانية الآن</a
-                >
               </div>
             </div>
           </div>
@@ -634,7 +691,7 @@
 
     <section class="review-section py-5">
       <div class="container">
-        <h2 class="fw-bold text-center mb-3">دعم فني حائز على جوائز</h2>
+        <h2 class="fw-bold text-center mb-3">دعم فني 24/7</h2>
         <p class="text-muted mb-4 mb-lg-5 text-center">
           يوفر لك نظام CRM خدمة دعم فني متكاملة لمساعدتك في إدارة عملائك
           ومبيعاتك بكل سهولة، مهما كانت المنصة التي تستخدمها.
@@ -794,7 +851,7 @@
     <section class="testimonials-section py-5">
       <div class="container">
         <div class="text-center">
-          <h2 class="section-title">محبوب من العملاء مثلك</h2>
+          <h2 class="section-title">آراء البعض من عملاء برنامج CRM</h2>
           <p class="section-subtitle">
             أصبح نظام CRM الخيار الأول في إدارة علاقات العملاء لأكثر من 13,500+
             عميل راضٍ.
@@ -937,7 +994,7 @@
           عملائك. قم بالترقية مع نموك أو الإلغاء في أي وقت.
         </p>
 
-        <div class="awards-section">
+        <div class="awards-section mb-4">
           <div class="award-badge">
             <div class="award-icon">
               <i class="bi bi-bell"></i>
@@ -954,7 +1011,7 @@
             <div class="award-subtitle">400</div>
           </div>
 
-          <div class="award-badge leader-badge">
+          <div class="award-badge">
             <div class="award-icon">
               <i class="bi bi-hand-thumbs-up"></i>
             </div>
@@ -989,7 +1046,7 @@
             <div class="award-subtitle">120</div>
           </div>
 
-          <div class="award-badge leader-badge">
+          <div class="award-badge">
             <div class="award-icon">
               <i class="bi bi-trophy"></i>
             </div>
@@ -997,34 +1054,15 @@
             <div class="award-subtitle">15</div>
           </div>
         </div>
-
-        <div class="feat-list">
-          <div class="feat-item">
-            <div class="checkmark">✓</div>
-            <span>التجربة تبدأ فوراً</span>
-          </div>
-          <div class="feat-item">
-            <div class="checkmark">✓</div>
-            <span>لا حاجة لبطاقة ائتمانية</span>
-          </div>
-          <div class="feat-item">
-            <div class="checkmark">✓</div>
-            <span>تغيير الخطة في أي وقت</span>
-          </div>
-          <div class="feat-item">
-            <div class="checkmark">✓</div>
-            <span>إلغاء في أي وقت</span>
-          </div>
-        </div>
-        <div class="d-flex justify-content-center align-items-center">
-          <button class="cta-button">ابدأ تجربتك المجانية لمدة 14 يوم</button>
-        </div>
       </div>
     </div>
 
     <div class="footer-section">
       <div class="footer-info">
-        <div>© 2025 كواكب التقنية. جميع الحقوق محفوظة.</div>
+        <div>
+          © 2025 كواكب التقنية. جميع الحقوق محفوظة.
+          <img src="images/logo-icon.png" alt="logo" width="25" />
+        </div>
         <div class="footer-links">
           <a href="#">سياسة الخصوصية وحماية البيانات</a>
           <span>|</span>

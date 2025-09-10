@@ -10,6 +10,10 @@
    list-style: none;
  }
 
+ a {
+  text-decoration: unset;
+ }
+
  body {
    background: #fff;
    color: #222;
@@ -33,12 +37,15 @@
        display: flex;
        gap: 10px;
 
-       button {
+       button, a {
          padding: 8px 16px;
          border: none;
-         cursor: pointer;
-         font-size: 14px;
          border-radius: 4px;
+         font-size: 14px;
+         transition: 0.3s;
+         &:hover {
+          transform: scale(1.05);
+         }
        }
 
        .demo-btn {
@@ -929,53 +936,6 @@
      opacity: 0.9;
    }
 
-   .feat-list {
-     display: flex;
-     justify-content: center;
-     gap: 50px;
-     margin-bottom: 35px;
-     flex-wrap: wrap;
-
-     .feat-item {
-       display: flex;
-       align-items: center;
-       gap: 12px;
-       font-size: 1.1rem;
-       font-weight: 500;
-
-       .checkmark {
-         width: 24px;
-         height: 24px;
-         background: #4CAF50;
-         border-radius: 50%;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         color: white;
-         font-weight: bold;
-         font-size: 14px;
-       }
-     }
-   }
-
-   .cta-button {
-     background: linear-gradient(45deg, #FF6B35, #FF8A50);
-     color: white;
-     border: none;
-     padding: 18px 40px;
-     border-radius: 8px;
-     font-size: 1.1rem;
-     font-weight: 600;
-     transition: all 0.3s ease;
-     text-transform: uppercase;
-     letter-spacing: 0.5px;
-     box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
-
-     &:hover {
-       transform: translateY(-2px);
-       box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
-     }
-   }
  }
 
 
@@ -1020,9 +980,6 @@
  }
 
 
-
-
-
  /* الاستجابة للأجهزة المحمولة */
  @media (max-width: 768px) {
    .main-heading {
@@ -1030,12 +987,6 @@
    }
 
    .awards-section {
-     gap: 20px;
-   }
-
-   .feat-list {
-     flex-direction: column;
-     align-items: center;
      gap: 20px;
    }
 

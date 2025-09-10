@@ -37,14 +37,16 @@ body {
   display: flex;
   gap: 10px;
 }
-.header .container .buttons button, .header .container .buttons a {
+.header .container .buttons button,
+.header .container .buttons a {
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
   font-size: 14px;
   transition: 0.3s;
 }
-.header .container .buttons button:hover, .header .container .buttons a:hover {
+.header .container .buttons button:hover,
+.header .container .buttons a:hover {
   transform: scale(1.05);
 }
 .header .container .buttons .demo-btn {
@@ -173,38 +175,106 @@ body {
 }
 
 .trusted-by {
-  padding: 30px 0;
   background: #fff;
   text-align: center;
 }
-.trusted-by .trusted-title {
+.trusted-by .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.trusted-by .content-wrapper .trusted-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  white-space: nowrap;
   font-size: 18px;
   font-weight: 600;
   color: #111;
-  margin-bottom: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
 }
-.trusted-by .trusted-title .arrow {
-  color: #2bb673;
+.trusted-by .content-wrapper .trusted-title .arrow {
+  color: #0a59c3;
   font-weight: bold;
+  font-size: 20px;
 }
-.trusted-by .logos {
+.trusted-by .content-wrapper .teams-bar {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 60px;
   flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 20px;
 }
-.trusted-by .logos img {
-  max-height: 50px;
-  opacity: 0.8;
-  transition: 0.3s;
+.trusted-by .content-wrapper .teams-bar .team-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 120px;
+  padding: 15px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
-.trusted-by .logos img:hover {
-  opacity: 1;
+.trusted-by .content-wrapper .teams-bar .team-item .team-icon {
+  font-size: 24px;
+  color: #0a59c3;
+  transition: all 0.3s ease;
+}
+.trusted-by .content-wrapper .teams-bar .team-item .team-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+.trusted-by .content-wrapper .teams-bar .team-item:hover {
+  transform: translateY(-3px);
+  background: rgba(43, 102, 182, 0.0509803922);
+}
+.trusted-by .content-wrapper .teams-bar .team-item:hover .team-icon {
+  transform: scale(1.1);
+  color: #0a59c3;
+}
+.trusted-by .content-wrapper .teams-bar .team-item:hover .team-name {
+  color: #0a59c3;
+  font-weight: 600;
+}
+.trusted-by .content-wrapper .teams-bar .team-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 150%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 30px;
+  background: #e0e0e0;
+  opacity: 0.5;
+}
+@media (max-width: 768px) {
+  .trusted-by .team-item {
+    min-width: auto;
+    padding: 10px 5px;
+  }
+  .trusted-by .team-icon {
+    font-size: 20px;
+  }
+  .trusted-by .team-name {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1399px) {
+  .trusted-by .content-wrapper {
+    gap: 15px;
+  }
+  .trusted-by .team-item:not(:last-child)::after {
+    display: none;
+  }
 }
 
 .features {
@@ -225,22 +295,20 @@ body {
   margin: 0 auto 40px;
   line-height: 1.6;
 }
-
-.features-grid {
+.features .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
   justify-items: center;
 }
-
-.feature-card {
+.features .features-grid .feature-card {
   background: #fff;
   border: 1px solid #e6f0fa;
   border-radius: 12px;
   padding: 20px;
   transition: all 0.3s ease;
 }
-.feature-card .icon-box {
+.features .features-grid .feature-card .icon-box {
   background: #e6f9f2;
   border: 1px solid #AEDCC8;
   border-radius: 10px;
@@ -250,23 +318,23 @@ body {
   padding: 15px;
   margin-bottom: 18px;
 }
-.feature-card .icon-box img {
+.features .features-grid .feature-card .icon-box img {
   width: 50px;
   height: 50px;
 }
-.feature-card h3 {
+.features .features-grid .feature-card h3 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 12px;
   color: #111;
 }
-.feature-card p {
+.features .features-grid .feature-card p {
   font-size: 15px;
   color: #555;
   line-height: 1.6;
   margin-bottom: 15px;
 }
-.feature-card:hover {
+.features .features-grid .feature-card:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   transform: translateY(-5px);
 }
